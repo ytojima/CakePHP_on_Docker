@@ -9,10 +9,12 @@ CakePHP v3.8を対象としているが、v4でも問題なく動作するはず
    - password : passw@rd
 
 ## Create Project
-以下のコマンドを実行し、質問に答える(基本Yで問題なし)
+ 1. appディレクトリの.gitkeepを削除 
+ 2. 以下のコマンドを実行し、質問に答える(基本Yで問題なし)
 ```bash
 docker-compose run --rm app composer create-project --prefer-dist cakephp/app:^3.8 .
 ```
+
 ### Error情報
 以下のエラーが発生するが問題なし。  
 [詳細ドキュメント](https://tt-computing.com/cake4-remove-post-autoload-dump)
@@ -25,6 +27,7 @@ docker-compose run --rm app composer create-project --prefer-dist cakephp/app:^3
      file and remove usage of                                                   
      Cake\Composer\Installer\PluginInstaller::postAutoloadDump
 ```
+
 対策として、インストール完了後に[この処理](https://qiita.com/H-Toshi/items/7efa294e1597152cec32)を行うと良い  
 `composer.json`の以下(40行目付近)を削除
 ```json
