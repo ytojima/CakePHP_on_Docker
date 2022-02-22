@@ -5,9 +5,11 @@ CakePHP v3.8を対象としているが、v4でも問題なく動作するはず
 ## 接続先
  - Cake php Top : [http://127.0.0.1/](http://127.0.0.1/)
  - phpMyAdmin : [http://127.0.0.1:8080/](http://127.0.0.1:8080/)
+   - username : root
+   - password : passw@rd
 
 ## Create Project
-以下のコマンドを実行し、質問に超える(基本Yで問題なし)
+以下のコマンドを実行し、質問に答える(基本Yで問題なし)
 ```bash
 docker-compose run --rm app composer create-project --prefer-dist cakephp/app:^3.8 .
 ```
